@@ -1,3 +1,43 @@
-<h1>
-  {{title}}
-</h1>
+<section class="messenger-app">
+  <header class="messenger-app-header">
+    <h1 class="messenger-app-title">Messenger App</h1>
+  </header>
+  <div class='messenger-app-form post-new-message'>
+    <div class="new-message-cont">
+        <input type="text" class="messenger-app-input new-message-subject" placeholder="What do you need as subject?" autofocus="" [(ngModel)]="newMessage.subject" />
+        <input type="text" class="messenger-app-input new-message-body" placeholder="What do you need as body?" [(ngModel)]="newMessage.body" />
+        <input type="text" class="messenger-app-input new-message-recipient" placeholder="For whom is this message?" autofocus="" [(ngModel)]="newRecipient" (keyup.enter)="addRecipient()" />
+        <p class="new-message-receipient-note">* Enter recipient name and press 'enter'. The list will be shown below</p>
+        <div class="new-message-recipients-list" *ngIf="newMessage.recipients.length > 0">
+          <ul class="message-recipients-list">
+            <div class="message-recipients-title">Next {{newMessage.recipients.length == 1 ? 'recipient' : 'recipients'}} will get your message</div>
+            <li *ngFor="let recipient of newMessage.recipients">
+              {{recipient}}
+            </li>
+          </ul>
+        </div>
+    </div>
+    <div class="new-message-submit-data-btn-cont">
+      <button class="messenger-app-button" (click)="addMessage()">Send message</button>
+    </div>
+  </div>
+  <div class="all-messages-cont" *ngIf="messages.length > 0">
+    <div class="all-messages-message-count"><strong>{{messages.length}}</strong> {{messages.length == 1 ? 'message' : 'messages'}} are sent:</div>
+    <ul class="view-message-card-list">
+      <li *ngFor="let message of messages" [class.sent]="message.is_sent">
+        <div class="view-message-card">
+          <div class="view-message-subject"><strong>Title: </strong>{{message.subject}}</div>
+          <div class="view-message-body"><strong>Body: </strong>{{message.body}}</div>
+          <div class="view-message-recipients-block" *ngIf="message.recipients.length > 0">
+            <strong>{{message.recipients.length == 1 ? 'Recipient:' : 'Recipients:'}}</strong>
+            <ul class="view-message-recipients-list">
+              <li *ngFor="let recipient of message.recipients">
+                <label>{{recipient}}</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

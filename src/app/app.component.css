@@ -1,0 +1,110 @@
+.messenger-app-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 70px;
+  color: rgba(50, 175, 80, 0.80);
+}
+
+.messenger-app {
+  background: #f5f5f5;
+}
+
+.messenger-app-form {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.new-message-cont {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  border-bottom: 1px solid #f4f6f8;
+}
+
+.new-message-submit-data-btn-cont {
+  text-align: center;
+}
+
+.new-message-section {
+  border-bottom: 0;
+}
+
+.messenger-app-input {
+  width: 100%;
+  display: block;
+  height: 44px;
+  line-height: 42px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 10px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.new-message-receipient-note {
+  width: 100%;
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 14px;
+  opacity: 0.5;
+  border-bottom: 1px solid #f4f6f8;
+} 
+
+.messenger-app-button {
+  width: 50%;
+  height: 44px;
+  font-size: 16px;
+  font-weight: normal;
+  display: block;
+  margin: 0 auto;
+}
+
+ul.message-recipients-list li{
+  list-style: none;
+  padding: 0;
+}
+
+.message-recipients-title {
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+.all-messages-cont {
+  width: 100%;
+  margin-top: 50px;
+}
+.all-messages-message-count {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.view-message-card-list li {
+  list-style: none;
+}
+
+.view-message-card {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  background: #fff;
+  padding: 10px;
+  width: 40%;
+  transition: 0.3s;
+}
+
+.view-message-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.view-message-card label {
+
+}
+
+.view-message-recipients-list {
+  padding: 0;
+}
+
+.view-message-recipients-list li{
+  list-style: none;
+}
